@@ -48,7 +48,7 @@ Log in again to start the new dwm. Other distributions can apply `hide-vacant-ta
 
 - Edit `portage/savedconfig/dwm-6.8`, then `doas sh install.sh` to rebuild. Because of `USE=savedconfig` Portage uses that file as `config.h`.
 - Change `col_cyan` (the selected tag and border colour) to bring colour back; `#005577` is dwm's default blue.
-- The browser path in `browsercmd` is absolute (`/home/rec/.local/bin/thorium`); change it to your own.
+- `browsercmd` runs `thorium` from your `PATH`; change it to your own browser.
 - To restart dwm with new settings, quit with `Alt+Shift+Q`: `.xinitrc` ends with `exec dwm`, so that ends the X session.
 
 ## How it works
