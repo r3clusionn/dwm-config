@@ -1,0 +1,6 @@
+# X straight from xinit (no resident startx shell, no xauth cookie: local
+# single-user box). Old session buses are killed first; .xinitrc starts one.
+if [ "$(tty)" = /dev/tty1 ]; then
+	pkill -u "$USER" -x dbus-daemon
+	exec xinit -- :0 vt1 -keeptty -nolisten tcp
+fi
